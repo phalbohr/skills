@@ -102,8 +102,6 @@ things that apply beyond this specific ticket.]
 
 ## Writing guidelines
 
-**Language: always Russian.** The entire report — headings, explanations, code comments — must be in Russian, regardless of what language the session was conducted in. Technical terms (Jackson, ObjectMapper, @JsonProperty) stay in their original form but everything else is Russian.
-
 **Write for a complete beginner.** Assume the reader is an intelligent person who has never seen this part of the codebase, may not know the framework deeply, and wants to truly understand — not just see a changelog. If a concept appears that a beginner might not know (e.g. "naming strategy", "Spring bean", "anonymous class"), explain it briefly right there in the text. Don't say "as you know" — assume they don't know.
 
 **Explain the WHY at every level.** The most valuable part of a journal entry is the motivation, not the mechanics. Why did this configuration exist in the first place? Why did removing it break tests? Why is one ObjectMapper different from another? If a reader understands the reasoning, they can adapt it to new situations. If they only know what was done, they can only copy it.

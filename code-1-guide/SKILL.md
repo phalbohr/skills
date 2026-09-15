@@ -1,5 +1,6 @@
 ---
 name: code-1-guide
+argument-hint: [путь/к/File.java | описание задачи]
 description: >
   Java/Spring Boot production code conventions for this project. ALWAYS apply when:
   creating or editing any Java or Kotlin production file (not tests, docs, or config),
@@ -99,3 +100,17 @@ Dependencies flow INWARD. The domain layer must be framework-free.
 ## 13. Backend vs Frontend Boundary
 
 **Strict Layer SRP:** Backend = business logic, auth, domain data. Frontend = UI, formatting (dates/i18n), presentation. NEVER leak frontend presentation concerns into backend APIs. NEVER leak backend business rules into frontend execution. Solve problems ONLY in their native domain.
+
+## 14. Principle of Least Privilege
+
+Grant the narrowest access that works. Widen only when a real caller needs it.
+
+- **Members:** default `private`. `protected` only for intended subclass extension, package-private for same-package collaborators, `public` only for the declared API.
+- **Classes:** package-private unless used outside the package. Prefer `final` (Java) / non-`open` (Kotlin) by default.
+- **State:** fields `private final`. No setters for invariant-bearing state — mutate via domain methods (see rule 5). No exposing internal collections; return unmodifiable copies.
+- **Variables:** declare in the narrowest scope that works. No field where a local suffices, no method-wide variable where a block-local suffices.
+- **Data exposure:** DTOs carry ONLY the fields the caller needs. Never expose internal ids, hashes, or audit fields "just in case".
+- **Read-only intent:** query endpoints and methods are declared read-only (`@Transactional(readOnly = true)`, `GET` without side effects).
+- **Tests:** NEVER relax a modifier or add a getter just to test. Test through the public API.
+- **Roles/security:** authorize at the Service/Operation layer, deny by default. Assign the minimal role/scope per endpoint; no wildcard roles. Service accounts and DB users get only the rights they use (no shared admin credentials).
+- **Config/secrets:** mount a secret only into the service that uses it. ENV carries no unused variables.

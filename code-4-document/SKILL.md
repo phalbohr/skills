@@ -1,5 +1,6 @@
 ---
 name: code-4-document
+argument-hint: [local | <PR/MR URL>] [diff | files]
 description: "Apply documentation improvements to production files in a GitHub PR, GitLab MR, or local branch according to the project's `4-document.md` rules. Unlike code-optimize, this skill WRITES changes to files. **Zero Comments Policy is absolute**: documentation is added ONLY for cases covered in `4-document.md` (OpenAPI annotations, JavaDoc for therapi, constants classes) — ordinary code gets no comments, no Javadoc, no inline annotations beyond what the rules mandate. Trigger when user says `/code-document`, 'document this PR/MR', 'apply doc rules to changed files', 'add OpenAPI docs', 'add documentation to changed files', or pastes a PR/MR URL and wants documentation applied."
 ---
 

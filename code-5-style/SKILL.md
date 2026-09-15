@@ -1,5 +1,6 @@
 ---
 name: code-5-style
+argument-hint: [local | <PR/MR URL>] [diff | files]
 description: "Apply code style fixes to files in a GitHub PR, GitLab MR, or local branch according to the project's `5-style.md` conventions. WRITES changes directly to files. Applies to ALL files including tests — style rules are universal. Trigger when user says `/code-style`, 'apply style rules', 'fix style in this PR/MR', 'enforce code conventions', 'fix var declarations', 'fix imports', 'fix DisplayName', 'clean up magic values', or pastes a PR/MR URL and wants style conventions enforced."
 ---
 

@@ -29,7 +29,7 @@ Keep PRODUCTION classes extremely clean from text boilerplate. All classes must 
 
 ## 3. Imports vs FQN
 
-ALWAYS use `import`. Avoid fully-qualified class names (FQN) inline unless resolving a naming collision (e.g. `java.util.Date` vs `java.sql.Date`).
+ALWAYS use `import`. Avoid fully-qualified class names (FQN) inline unless resolving a naming collision (e.g. `java.util.Date` vs `java.sql.Date`). Remove unused imports.
 
 ## 4. Nested Idempotency Keys
 

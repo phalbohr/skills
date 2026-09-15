@@ -1,5 +1,6 @@
 ---
 name: code-2-test
+argument-hint: [путь/к/FileTest.java | описание теста]
 paths: src/test/**, "**/*Test.java", "**/*IT.java", "**/*IntegrationTest.java"
 description: >
   Test writing conventions for Java/Spring projects. ALWAYS activate this skill when:

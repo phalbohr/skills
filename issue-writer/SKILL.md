@@ -1,7 +1,7 @@
 ---
 name: issue-writer
 description: Issue Writer Agent
-disable-model-invocation: true
+disable-model-invocation: false
 argument-hint: <context><path/to/issue.md>
 ---
 
