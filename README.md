@@ -16,6 +16,7 @@ Die Skills außer **ast-grep**, **graphify** und **postman** sind von mir geschr
 - **code-6-approve-or-block** — Bewertet einen PR/MR mit Freigabe-/Blockier-Entscheidung.
 - **deep-review** — Tiefgehende Code-Reviews nach 13 spezialisierten Prüfpunkten.
 - **issue-writer** — Erstellt GitLab-Issues aus Kontext, strukturiert nach Layern.
+- **landing-page-studio** — Orchestriert sieben Skills, um eine Landingpage zu erstellen, neu zu gestalten oder zu auditieren.
 - **post-mortum** — Schreibt einen Post-Mortem-Bericht über Probleme und Fehler einer Sitzung.
 - **review-with-postman** — Reviewt einen MR und erstellt passende Postman-Requests zum verlinkten Issue.
   - **postman** — Verwaltet den API-Lebenszyklus über Postman (Collections, Tests, Mocks, Security-Audits).
