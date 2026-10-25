@@ -2,11 +2,9 @@
 
 ## Skills in diesem Repository
 
-Die Skills außer **ast-grep**, **graphify** und **postman** sind von mir geschrieben. Die drei werden von meinen **code-search** bzw. **review-with-postman** Skills benutzt.
+Die Skills außer **ast-grep** und **postman** sind von mir geschrieben. **postman** wird von meinem **review-with-postman** Skill benutzt.
 
-- **code-search** — Routing-Leitfaden zwischen ast-grep, graphify und direktem Lesen für Codesuche.
-  - **ast-grep** — Regeln für strukturelle Codesuche mit AST-Mustern statt reinem Text.
-  - **graphify** — Baut einen Wissensgraphen aus Code/Dokumenten für Architektur- und Abhängigkeitsfragen.
+- **ast-grep** — Regeln für strukturelle Codesuche mit AST-Mustern statt reinem Text. Die Auswahl zwischen `rg`, ast-grep und LSP steht direkt in `AGENTS.md` / `CLAUDE.md`.
 - **clean-code** — Prinzipien aus "Clean Code" (Uncle Bob) für lesbaren, wartbaren Code.
 - **code-1-guide** — Java/Spring-Boot-Konventionen für Produktionscode.
 - **code-2-test** — Konventionen für das Schreiben von Tests (JUnit, Mockito, AAA-Muster).
