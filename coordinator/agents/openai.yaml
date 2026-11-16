@@ -1,0 +1,5 @@
+interface:
+  display_name: "Coordinator"
+  short_description: "Run three worker sessions on three models"
+policy:
+  allow_implicit_invocation: false
