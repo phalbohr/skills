@@ -27,6 +27,8 @@ MassStockResponse response = service.processOperation(request, userId);
 
 Keep PRODUCTION classes extremely clean from text boilerplate. All classes must follow an absolute **Zero Comments Policy** (no JavaDoc, no class-level comments).
 
+**Flyway migrations keep their comments.** In SQL and Java migrations (`db/migration`), `COMMENT ON` statements are mandatory schema documentation (`4-document.md`, rule 8), and plain comments may explain the intent of the immutable script.
+
 ## 3. Imports vs FQN
 
 ALWAYS use `import`. Avoid fully-qualified class names (FQN) inline unless resolving a naming collision (e.g. `java.util.Date` vs `java.sql.Date`). Remove unused imports.

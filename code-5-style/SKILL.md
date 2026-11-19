@@ -1,6 +1,6 @@
 ---
 name: code-5-style
-argument-hint: [local | <PR/MR URL>] [diff | files]
+argument-hint: "[local | <PR/MR URL>] [diff | files]"
 description: "Apply code style fixes to files in a GitHub PR, GitLab MR, or local branch according to the project's `5-style.md` conventions. WRITES changes directly to files. Applies to ALL files including tests — style rules are universal. Trigger when user says `/code-style`, 'apply style rules', 'fix style in this PR/MR', 'enforce code conventions', 'fix var declarations', 'fix imports', 'fix DisplayName', 'clean up magic values', or pastes a PR/MR URL and wants style conventions enforced."
 ---
 
@@ -85,7 +85,7 @@ For each file, check every rule from the loaded `5-style.md`. Apply only what th
 
 Scope guidance per rule:
 - **Rule 1 (var)** — production files only; test files may use explicit types for test DSL clarity unless the project rules say otherwise
-- **Rule 2 (Zero Comments)** — production classes only; remove class-level JavaDoc and comments
+- **Rule 2 (Zero Comments)** — production classes only; remove class-level JavaDoc and comments. Flyway migrations (`db/migration`, SQL and Java) keep every comment, `COMMENT ON` included
 - **Rule 3 (imports)** — all files; replace any FQN inline usage with import + short name (except genuine collision)
 - **Rule 4 (Idempotency Keys)** — all files; fix any parent key reuse in nested operations
 - **Rule 5 (No Magic Values)** — all files; extract literals to named `static final` constants
